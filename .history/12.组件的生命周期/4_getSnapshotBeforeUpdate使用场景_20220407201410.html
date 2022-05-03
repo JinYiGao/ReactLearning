@@ -1,0 +1,57 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: JinYiGao
+ * @Date: 2022-04-07 20:07:05
+ * @LastEditors: JinYiGao
+ * @LastEditTime: 2022-04-07 20:14:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello React</title>
+
+    <link rel="stylesheet", href="./index.css">
+</head>
+<body>
+    <div id="test"></div>
+    
+    <script type="text/javascript" src="../js/react.development.js"></script>
+    <script type="text/javascript" src="../js/react-dom.development.js"></script>
+    <script type="text/javascript" src="../js/prop-types.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+        // 1. 创建类式组件
+        class NewsList extends React.Component{
+            state = {
+                newsArr:[]
+            }
+
+            componentDidMount(){
+                setInterval(() => {
+                    cnst newsArr = <this class="state news"></this>
+                }, 1000);
+            }
+
+            render(){
+                return(
+                    <div className="list">
+                        <div className="news">新闻6</div>
+                        <div className="news">新闻5</div>
+                        <div className="news">新闻4</div>
+                        <div className="news">新闻3</div>
+                        <div className="news">新闻2</div>
+                        <div className="news">新闻1</div>
+                    </div>
+                )
+            }
+        }
+        // 2. 渲染组件到页面
+        ReactDOM.render(<NewsList />, document.getElementById("test"));
+    </script>
+</body>
+</html>
